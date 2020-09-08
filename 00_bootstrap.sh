@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo \#\# First prepare build environment
-wget http://shyboy.oss-cn-shenzhen.aliyuncs.com/readonly/tc32_gcc_v2.0.tar.bz2 -O docker/tc32_gcc.tar.bz2
+curl  http://shyboy.oss-cn-shenzhen.aliyuncs.com/readonly/tc32_gcc_v2.0.tar.bz2 > docker/tc32_gcc.tar.bz2
 docker build ./docker/ -t tc32
 
 
@@ -11,5 +11,4 @@ git clone --depth=1 https://github.com/Ai-Thinker-Open/Telink_825X_SDK SDK
 
 echo \#\# Download ATC_MiThermometer and patch makefile
 git clone https://github.com/atc1441/ATC_MiThermometer
-sed -i "/TEL_PATH := ..\/../c TEL_PATH := ..\/../SDK\/" ATC_MiThermometer/ATC_Thermometer/makefile
-
+sed -i '' 's#TEL_PATH := ..\/..#TEL_PATH := ..\/../SDK\/#g' ATC_MiThermometer/ATC_Thermometer/makefile
