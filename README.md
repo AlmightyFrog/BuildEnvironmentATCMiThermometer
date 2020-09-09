@@ -2,6 +2,12 @@
 
 This is a tc32_gcc custom tailored build environment for https://github.com/atc1441/ATC_MiThermometer according to referenced instructions there for linux but in a docker container.
 
+It shall work on both Linux and macOS with following dependencies installed:
+* curl
+* docker
+* git
+* sed 
+
 **00_bootstrap.sh** does only need to be run once which does multiple things
 
 * build docker image containing tc32_gcc similar like mentioned in https://github.com/Ai-Thinker-Open/Telink_825X_SDK/blob/master/start_linux.md
