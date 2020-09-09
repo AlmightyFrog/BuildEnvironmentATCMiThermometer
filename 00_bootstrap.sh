@@ -11,4 +11,9 @@ git clone --depth=1 https://github.com/Ai-Thinker-Open/Telink_825X_SDK SDK
 
 echo \#\# Download ATC_MiThermometer and patch makefile
 git clone https://github.com/atc1441/ATC_MiThermometer
-sed -i '' 's#TEL_PATH := ..\/..#TEL_PATH := ..\/../SDK\/#g' ATC_MiThermometer/ATC_Thermometer/makefile
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    sed -i '' 's#TEL_PATH := ..\/..#TEL_PATH := ..\/../SDK\/#g' ATC_MiThermometer/ATC_Thermometer/makefile
+else
+    sed -i "/TEL_PATH := ..\/../c TEL_PATH := ..\/../SDK\/" ATC_MiThermometer/ATC_Thermometer/makefile
+fi
