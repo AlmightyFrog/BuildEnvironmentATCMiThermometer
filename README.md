@@ -1,6 +1,6 @@
 # Build environment setup for ATC_MiThermometer
 
-This is a tc32_gcc custom tailored build environment for https://github.com/atc1441/ATC_MiThermometer according to referenced instructions there for linux but in a docker container.
+This is a tc32_gcc custom tailored build environment for https://github.com/atc1441/ATC_MiThermometer or https://github.com/pvvx/ATC_MiThermometer according to referenced instructions there for linux but in a docker container.
 
 It shall work on both Linux and macOS with following dependencies installed:
 * curl
@@ -12,7 +12,7 @@ It shall work on both Linux and macOS with following dependencies installed:
 
 * build docker image containing tc32_gcc similar like mentioned in https://github.com/Ai-Thinker-Open/Telink_825X_SDK/blob/master/start_linux.md
 * fetches https://github.com/Ai-Thinker-Open/Telink_825X_SDK as SDK
-* fetches https://github.com/atc1441/ATC_MiThermometer and patches makefile to be able to run with this build environment using custom SDK location
+* fetches https://github.com/atc1441/ATC_MiThermometer or https://github.com/pvvx/ATC_MiThermometer and patches makefile to be able to run with this build environment using custom SDK location
 
 Afterwards you can simply use **01_make.sh** to compile ATC_MiThermometer. If you want you can also add parameter like "**./01_make.sh clean**" to it.
 
