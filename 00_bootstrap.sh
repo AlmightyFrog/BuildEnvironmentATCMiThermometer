@@ -1,5 +1,4 @@
 #!/bin/bash
-$MAKE_COMMAND
 
 if [ ! -d "ATC_MiThermometer" ]; then
     read -p "Select flavor of firmware, 'atc1441' or 'pvvx' [atc1441]: " FLAVOR
